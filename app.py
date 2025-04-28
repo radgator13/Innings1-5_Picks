@@ -115,12 +115,13 @@ with col2:
 st.subheader("📈 Daily Model Accuracy Trend")
 
 # Only use played games
-daily_summary = played_df.groupby('Game Date').apply(
+daily_summary = played_df.groupby('Game Date', group_keys=False).apply(
     lambda g: pd.Series({
         'Total Games': len(g),
         'Correct Games': (g['Predicted_Over_4_5'] == g['Actual_Over_4_5']).sum()
     })
 ).reset_index()
+
 
 daily_summary['Accuracy'] = (daily_summary['Correct Games'] / daily_summary['Total Games']) * 100
 
