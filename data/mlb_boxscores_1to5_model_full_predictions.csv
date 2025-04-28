@@ -56,26 +56,26 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-03-31,Texas Rangers,Cincinnati Reds,4.5,4.596285714285714,Under,6,Over
 2025-03-31,San Francisco Giants,Houston Astros,4.5,3.9665,Under,2,Under
 2025-03-31,Atlanta Braves,Los Angeles Dodgers,4.5,4.611642857142857,Under,5,Over
-2025-03-31,New York Mets,Miami Marlins,4.5,3.7665714285714285,Under,9,Over
+2025-03-31,New York Mets,Miami Marlins,4.5,3.766571428571429,Under,9,Over
 2025-03-31,Kansas City Royals,Milwaukee Brewers,4.5,3.598,Under,4,Under
 2025-03-31,Colorado Rockies,Philadelphia Phillies,4.5,3.575,Under,Pending,Pending
 2025-03-31,Cleveland Guardians,San Diego Padres,4.5,4.884428571428571,Under,9,Over
 2025-03-31,Detroit Tigers,Seattle Mariners,4.5,5.271297619047619,Over,12,Over
 2025-03-31,Los Angeles Angels,St. Louis Cardinals,4.5,4.973928571428571,Under,4,Under
-2025-03-31,Pittsburgh Pirates,Tampa Bay Rays,4.5,3.6268333333333334,Under,4,Under
+2025-03-31,Pittsburgh Pirates,Tampa Bay Rays,4.5,3.626833333333333,Under,4,Under
 2025-03-31,Washington Nationals,Toronto Blue Jays,4.5,3.8235,Under,4,Under
 2025-04-01,Chicago Cubs,Athletics,4.5,6.165,Over,10,Over
 2025-04-01,Minnesota Twins,Chicago White Sox,4.5,5.671499999999999,Over,3,Under
 2025-04-01,Texas Rangers,Cincinnati Reds,4.5,4.596285714285714,Under,1,Under
 2025-04-01,San Francisco Giants,Houston Astros,4.5,3.9665,Under,4,Under
 2025-04-01,Atlanta Braves,Los Angeles Dodgers,4.5,4.611642857142857,Under,1,Under
-2025-04-01,New York Mets,Miami Marlins,4.5,3.7665714285714285,Under,6,Over
+2025-04-01,New York Mets,Miami Marlins,4.5,3.766571428571429,Under,6,Over
 2025-04-01,Kansas City Royals,Milwaukee Brewers,4.5,3.598,Under,2,Under
 2025-04-01,Arizona Diamondbacks,New York Yankees,4.5,4.975357142857144,Under,6,Over
 2025-04-01,Cleveland Guardians,San Diego Padres,4.5,4.884428571428571,Under,3,Under
 2025-04-01,Detroit Tigers,Seattle Mariners,4.5,5.271297619047619,Over,3,Under
 2025-04-01,Los Angeles Angels,St. Louis Cardinals,4.5,4.973928571428571,Under,5,Over
-2025-04-01,Pittsburgh Pirates,Tampa Bay Rays,4.5,3.6268333333333334,Under,6,Over
+2025-04-01,Pittsburgh Pirates,Tampa Bay Rays,4.5,3.626833333333333,Under,6,Over
 2025-04-01,Washington Nationals,Toronto Blue Jays,4.5,3.8235,Under,3,Under
 2025-04-02,Chicago Cubs,Athletics,4.5,6.165,Over,10,Over
 2025-04-02,Boston Red Sox,Baltimore Orioles,4.5,4.997,Under,3,Under
@@ -83,14 +83,14 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-02,Texas Rangers,Cincinnati Reds,4.5,4.596285714285714,Under,1,Under
 2025-04-02,San Francisco Giants,Houston Astros,4.5,3.9665,Under,8,Over
 2025-04-02,Atlanta Braves,Los Angeles Dodgers,4.5,4.611642857142857,Under,8,Over
-2025-04-02,New York Mets,Miami Marlins,4.5,3.7665714285714285,Under,3,Under
+2025-04-02,New York Mets,Miami Marlins,4.5,3.766571428571429,Under,3,Under
 2025-04-02,Kansas City Royals,Milwaukee Brewers,4.5,3.598,Under,2,Under
 2025-04-02,Arizona Diamondbacks,New York Yankees,4.5,4.975357142857144,Under,4,Under
 2025-04-02,Colorado Rockies,Philadelphia Phillies,4.5,3.575,Under,2,Under
 2025-04-02,Cleveland Guardians,San Diego Padres,4.5,4.884428571428571,Under,4,Under
 2025-04-02,Detroit Tigers,Seattle Mariners,4.5,5.271297619047619,Over,5,Over
 2025-04-02,Los Angeles Angels,St. Louis Cardinals,4.5,4.973928571428571,Under,2,Under
-2025-04-02,Pittsburgh Pirates,Tampa Bay Rays,4.5,3.6268333333333334,Under,2,Under
+2025-04-02,Pittsburgh Pirates,Tampa Bay Rays,4.5,3.626833333333333,Under,2,Under
 2025-04-02,Washington Nationals,Toronto Blue Jays,4.5,3.8235,Under,3,Under
 2025-04-03,Boston Red Sox,Baltimore Orioles,4.5,4.997,Under,8,Over
 2025-04-03,Cincinnati Reds,Milwaukee Brewers,4.5,5.744666666666667,Over,1,Under
@@ -127,7 +127,6 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-05,Tampa Bay Rays,Texas Rangers,4.5,4.974571428571428,Under,5,Over
 2025-04-05,Arizona Diamondbacks,Washington Nationals,4.5,6.327500000000001,Over,4,Under
 2025-04-06,Miami Marlins,Atlanta Braves,4.5,3.593,Under,Pending,Pending
-2025-04-06,St. Louis Cardinals,Boston Red Sox,4.5,4.969202380952382,Under,3,Under
 2025-04-06,St. Louis Cardinals,Boston Red Sox,4.5,4.969202380952382,Under,13,Over
 2025-04-06,San Diego Padres,Chicago Cubs,4.5,4.470654761904762,Under,13,Over
 2025-04-06,Athletics,Colorado Rockies,4.5,4.506695887445887,Under,11,Over
@@ -201,7 +200,7 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-11,Detroit Tigers,Minnesota Twins,4.5,5.095833333333333,Over,5,Over
 2025-04-11,San Francisco Giants,New York Yankees,4.5,5.417,Over,9,Over
 2025-04-11,Colorado Rockies,San Diego Padres,4.5,5.205107142857143,Over,6,Over
-2025-04-11,Texas Rangers,Seattle Mariners,4.5,4.3973571428571425,Under,4,Under
+2025-04-11,Texas Rangers,Seattle Mariners,4.5,4.397357142857143,Under,4,Under
 2025-04-11,Philadelphia Phillies,St. Louis Cardinals,4.5,3.745,Under,2,Under
 2025-04-11,Atlanta Braves,Tampa Bay Rays,4.5,3.592142857142857,Under,4,Under
 2025-04-12,Milwaukee Brewers,Arizona Diamondbacks,4.5,3.706,Under,2,Under
@@ -216,7 +215,7 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-12,Detroit Tigers,Minnesota Twins,4.5,5.095833333333333,Over,2,Under
 2025-04-12,San Francisco Giants,New York Yankees,4.5,5.417,Over,9,Over
 2025-04-12,Colorado Rockies,San Diego Padres,4.5,5.205107142857143,Over,2,Under
-2025-04-12,Texas Rangers,Seattle Mariners,4.5,4.3973571428571425,Under,6,Over
+2025-04-12,Texas Rangers,Seattle Mariners,4.5,4.397357142857143,Under,6,Over
 2025-04-12,Philadelphia Phillies,St. Louis Cardinals,4.5,3.745,Under,3,Under
 2025-04-12,Atlanta Braves,Tampa Bay Rays,4.5,3.592142857142857,Under,2,Under
 2025-04-13,Milwaukee Brewers,Arizona Diamondbacks,4.5,3.706,Under,3,Under
@@ -231,18 +230,18 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-13,Detroit Tigers,Minnesota Twins,4.5,5.095833333333333,Over,3,Under
 2025-04-13,San Francisco Giants,New York Yankees,4.5,5.417,Over,4,Under
 2025-04-13,Colorado Rockies,San Diego Padres,4.5,5.205107142857143,Over,5,Over
-2025-04-13,Texas Rangers,Seattle Mariners,4.5,4.3973571428571425,Under,3,Under
+2025-04-13,Texas Rangers,Seattle Mariners,4.5,4.397357142857143,Under,3,Under
 2025-04-13,Philadelphia Phillies,St. Louis Cardinals,4.5,3.745,Under,2,Under
 2025-04-13,Atlanta Braves,Tampa Bay Rays,4.5,3.592142857142857,Under,4,Under
 2025-04-14,Colorado Rockies,Los Angeles Dodgers,4.5,4.814071428571428,Under,4,Under
 2025-04-14,Detroit Tigers,Milwaukee Brewers,4.5,4.486130952380952,Under,9,Over
 2025-04-14,New York Mets,Minnesota Twins,4.5,4.5262142857142855,Under,2,Under
-2025-04-14,Kansas City Royals,New York Yankees,4.5,5.0184999999999995,Over,5,Over
+2025-04-14,Kansas City Royals,New York Yankees,4.5,5.0185,Over,5,Over
 2025-04-14,San Francisco Giants,Philadelphia Phillies,4.5,5.2945714285714285,Over,10,Over
 2025-04-14,Washington Nationals,Pittsburgh Pirates,4.5,4.333142857142857,Under,5,Over
 2025-04-14,Chicago Cubs,San Diego Padres,4.5,3.8199642857142857,Under,4,Under
-2025-04-14,Houston Astros,St. Louis Cardinals,4.5,5.1917857142857144,Over,7,Over
-2025-04-14,Boston Red Sox,Tampa Bay Rays,4.5,5.3642142857142865,Over,16,Over
+2025-04-14,Houston Astros,St. Louis Cardinals,4.5,5.191785714285714,Over,7,Over
+2025-04-14,Boston Red Sox,Tampa Bay Rays,4.5,5.364214285714287,Over,16,Over
 2025-04-14,Atlanta Braves,Toronto Blue Jays,4.5,5.449,Over,8,Over
 2025-04-15,Cleveland Guardians,Baltimore Orioles,4.5,5.602,Over,4,Under
 2025-04-15,Athletics,Chicago White Sox,4.5,4.434916666666666,Under,8,Over
@@ -251,12 +250,12 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-15,Arizona Diamondbacks,Miami Marlins,4.5,5.6541428571428565,Over,6,Over
 2025-04-15,Detroit Tigers,Milwaukee Brewers,4.5,4.486130952380952,Under,3,Under
 2025-04-15,New York Mets,Minnesota Twins,4.5,4.5262142857142855,Under,6,Over
-2025-04-15,Kansas City Royals,New York Yankees,4.5,5.0184999999999995,Over,2,Under
+2025-04-15,Kansas City Royals,New York Yankees,4.5,5.0185,Over,2,Under
 2025-04-15,San Francisco Giants,Philadelphia Phillies,4.5,5.2945714285714285,Over,4,Under
 2025-04-15,Washington Nationals,Pittsburgh Pirates,4.5,4.333142857142857,Under,1,Under
 2025-04-15,Chicago Cubs,San Diego Padres,4.5,3.8199642857142857,Under,1,Under
-2025-04-15,Houston Astros,St. Louis Cardinals,4.5,5.1917857142857144,Over,Pending,Pending
-2025-04-15,Boston Red Sox,Tampa Bay Rays,4.5,5.3642142857142865,Over,8,Over
+2025-04-15,Houston Astros,St. Louis Cardinals,4.5,5.191785714285714,Over,Pending,Pending
+2025-04-15,Boston Red Sox,Tampa Bay Rays,4.5,5.364214285714287,Over,8,Over
 2025-04-15,Los Angeles Angels,Texas Rangers,4.5,4.114285714285714,Under,Pending,Pending
 2025-04-15,Atlanta Braves,Toronto Blue Jays,4.5,5.449,Over,7,Over
 2025-04-16,Cleveland Guardians,Baltimore Orioles,4.5,5.602,Over,5,Over
@@ -266,12 +265,12 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-16,Arizona Diamondbacks,Miami Marlins,4.5,5.6541428571428565,Over,3,Under
 2025-04-16,Detroit Tigers,Milwaukee Brewers,4.5,4.486130952380952,Under,4,Under
 2025-04-16,New York Mets,Minnesota Twins,4.5,4.5262142857142855,Under,2,Under
-2025-04-16,Kansas City Royals,New York Yankees,4.5,5.0184999999999995,Over,6,Over
+2025-04-16,Kansas City Royals,New York Yankees,4.5,5.0185,Over,6,Over
 2025-04-16,San Francisco Giants,Philadelphia Phillies,4.5,5.2945714285714285,Over,9,Over
 2025-04-16,Washington Nationals,Pittsburgh Pirates,4.5,4.333142857142857,Under,1,Under
 2025-04-16,Chicago Cubs,San Diego Padres,4.5,3.8199642857142857,Under,3,Under
-2025-04-16,Houston Astros,St. Louis Cardinals,4.5,5.1917857142857144,Over,4,Under
-2025-04-16,Boston Red Sox,Tampa Bay Rays,4.5,5.3642142857142865,Over,1,Under
+2025-04-16,Houston Astros,St. Louis Cardinals,4.5,5.191785714285714,Over,4,Under
+2025-04-16,Boston Red Sox,Tampa Bay Rays,4.5,5.364214285714287,Over,1,Under
 2025-04-16,Los Angeles Angels,Texas Rangers,4.5,4.114285714285714,Under,3,Under
 2025-04-16,Atlanta Braves,Toronto Blue Jays,4.5,5.449,Over,1,Under
 2025-04-17,Cleveland Guardians,Baltimore Orioles,4.5,5.602,Over,6,Over
@@ -292,7 +291,7 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-18,Kansas City Royals,Detroit Tigers,4.5,4.387535714285714,Under,6,Over
 2025-04-18,San Diego Padres,Houston Astros,4.5,4.459535714285714,Under,7,Over
 2025-04-18,San Francisco Giants,Los Angeles Angels,4.5,3.716,Under,2,Under
-2025-04-18,Athletics,Milwaukee Brewers,4.5,3.6229999999999998,Under,3,Under
+2025-04-18,Athletics,Milwaukee Brewers,4.5,3.623,Under,3,Under
 2025-04-18,St. Louis Cardinals,New York Mets,4.5,4.2302857142857135,Under,4,Under
 2025-04-18,Miami Marlins,Philadelphia Phillies,4.5,6.4,Over,7,Over
 2025-04-18,Cleveland Guardians,Pittsburgh Pirates,4.5,4.46645238095238,Under,7,Over
@@ -307,7 +306,7 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-19,Kansas City Royals,Detroit Tigers,4.5,4.387535714285714,Under,3,Under
 2025-04-19,San Diego Padres,Houston Astros,4.5,4.459535714285714,Under,2,Under
 2025-04-19,San Francisco Giants,Los Angeles Angels,4.5,3.716,Under,4,Under
-2025-04-19,Athletics,Milwaukee Brewers,4.5,3.6229999999999998,Under,2,Under
+2025-04-19,Athletics,Milwaukee Brewers,4.5,3.623,Under,2,Under
 2025-04-19,St. Louis Cardinals,New York Mets,4.5,4.2302857142857135,Under,2,Under
 2025-04-19,Miami Marlins,Philadelphia Phillies,4.5,6.4,Over,10,Over
 2025-04-19,Cleveland Guardians,Pittsburgh Pirates,4.5,4.46645238095238,Under,1,Under
@@ -318,12 +317,11 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-20,Cincinnati Reds,Baltimore Orioles,4.5,6.3155,Over,13,Over
 2025-04-20,Chicago White Sox,Boston Red Sox,4.5,5.0145,Over,6,Over
 2025-04-20,Arizona Diamondbacks,Chicago Cubs,4.5,4.441571428571429,Under,2,Under
-2025-04-20,Washington Nationals,Colorado Rockies,4.5,4.170357142857143,Under,4,Under
 2025-04-20,Washington Nationals,Colorado Rockies,4.5,4.170357142857143,Under,3,Under
 2025-04-20,Kansas City Royals,Detroit Tigers,4.5,4.387535714285714,Under,4,Under
 2025-04-20,San Diego Padres,Houston Astros,4.5,4.459535714285714,Under,4,Under
 2025-04-20,San Francisco Giants,Los Angeles Angels,4.5,3.716,Under,2,Under
-2025-04-20,Athletics,Milwaukee Brewers,4.5,3.6229999999999998,Under,9,Over
+2025-04-20,Athletics,Milwaukee Brewers,4.5,3.623,Under,9,Over
 2025-04-20,St. Louis Cardinals,New York Mets,4.5,4.2302857142857135,Under,3,Under
 2025-04-20,Miami Marlins,Philadelphia Phillies,4.5,6.4,Over,5,Over
 2025-04-20,Cleveland Guardians,Pittsburgh Pirates,4.5,4.46645238095238,Under,2,Under
@@ -332,9 +330,9 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-20,Seattle Mariners,Toronto Blue Jays,4.5,4.495071428571428,Under,9,Over
 2025-04-21,St. Louis Cardinals,Atlanta Braves,4.5,4.461571428571428,Under,4,Under
 2025-04-21,Chicago White Sox,Boston Red Sox,4.5,5.0145,Over,5,Over
-2025-04-21,New York Yankees,Cleveland Guardians,4.5,5.4663571428571425,Over,5,Over
+2025-04-21,New York Yankees,Cleveland Guardians,4.5,5.466357142857143,Over,5,Over
 2025-04-21,San Diego Padres,Detroit Tigers,4.5,3.645,Under,10,Over
-2025-04-21,Toronto Blue Jays,Houston Astros,4.5,3.9950714285714284,Under,4,Under
+2025-04-21,Toronto Blue Jays,Houston Astros,4.5,3.995071428571429,Under,4,Under
 2025-04-21,Cincinnati Reds,Miami Marlins,4.5,4.670178571428572,Under,3,Under
 2025-04-21,Philadelphia Phillies,New York Mets,4.5,3.535,Under,2,Under
 2025-04-21,Milwaukee Brewers,San Francisco Giants,4.5,4.14775,Under,4,Under
@@ -343,9 +341,9 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-22,St. Louis Cardinals,Atlanta Braves,4.5,4.461571428571428,Under,6,Over
 2025-04-22,Seattle Mariners,Boston Red Sox,4.5,6.4625,Over,5,Over
 2025-04-22,Los Angeles Dodgers,Chicago Cubs,4.5,6.3395,Over,11,Over
-2025-04-22,New York Yankees,Cleveland Guardians,4.5,5.4663571428571425,Over,1,Under
+2025-04-22,New York Yankees,Cleveland Guardians,4.5,5.466357142857143,Over,1,Under
 2025-04-22,San Diego Padres,Detroit Tigers,4.5,3.645,Under,2,Under
-2025-04-22,Toronto Blue Jays,Houston Astros,4.5,3.9950714285714284,Under,4,Under
+2025-04-22,Toronto Blue Jays,Houston Astros,4.5,3.995071428571429,Under,4,Under
 2025-04-22,Colorado Rockies,Kansas City Royals,4.5,5.0406547619047615,Over,Pending,Pending
 2025-04-22,Pittsburgh Pirates,Los Angeles Angels,4.5,5.296714285714286,Over,9,Over
 2025-04-22,Cincinnati Reds,Miami Marlins,4.5,4.670178571428572,Under,3,Under
@@ -358,9 +356,9 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-23,St. Louis Cardinals,Atlanta Braves,4.5,4.461571428571428,Under,1,Under
 2025-04-23,Seattle Mariners,Boston Red Sox,4.5,6.4625,Over,6,Over
 2025-04-23,Los Angeles Dodgers,Chicago Cubs,4.5,6.3395,Over,12,Over
-2025-04-23,New York Yankees,Cleveland Guardians,4.5,5.4663571428571425,Over,5,Over
+2025-04-23,New York Yankees,Cleveland Guardians,4.5,5.466357142857143,Over,5,Over
 2025-04-23,San Diego Padres,Detroit Tigers,4.5,3.645,Under,2,Under
-2025-04-23,Toronto Blue Jays,Houston Astros,4.5,3.9950714285714284,Under,4,Under
+2025-04-23,Toronto Blue Jays,Houston Astros,4.5,3.995071428571429,Under,4,Under
 2025-04-23,Colorado Rockies,Kansas City Royals,4.5,5.0406547619047615,Over,Pending,Pending
 2025-04-23,Pittsburgh Pirates,Los Angeles Angels,4.5,5.296714285714286,Over,2,Under
 2025-04-23,Cincinnati Reds,Miami Marlins,4.5,4.670178571428572,Under,5,Over
@@ -371,7 +369,6 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-24,Tampa Bay Rays,Arizona Diamondbacks,4.5,5.071857142857143,Over,5,Over
 2025-04-24,Texas Rangers,Athletics,4.5,6.425,Over,5,Over
 2025-04-24,Seattle Mariners,Boston Red Sox,4.5,6.4625,Over,6,Over
-2025-04-24,Colorado Rockies,Kansas City Royals,4.5,5.0406547619047615,Over,10,Over
 2025-04-24,Colorado Rockies,Kansas City Royals,4.5,5.0406547619047615,Over,5,Over
 2025-04-24,Pittsburgh Pirates,Los Angeles Angels,4.5,5.296714285714286,Over,6,Over
 2025-04-24,Chicago White Sox,Minnesota Twins,4.5,4.642035714285714,Under,2,Under
@@ -395,10 +392,8 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-26,Atlanta Braves,Arizona Diamondbacks,4.5,4.724428571428572,Under,7,Over
 2025-04-26,Chicago White Sox,Athletics,4.5,5.2,Over,7,Over
 2025-04-26,Philadelphia Phillies,Chicago Cubs,4.5,4.2131428571428575,Under,8,Over
-2025-04-26,Boston Red Sox,Cleveland Guardians,4.5,5.104000000000001,Over,8,Over
 2025-04-26,Boston Red Sox,Cleveland Guardians,4.5,5.104000000000001,Over,9,Over
 2025-04-26,Cincinnati Reds,Colorado Rockies,4.5,5.96454761904762,Over,6,Over
-2025-04-26,Baltimore Orioles,Detroit Tigers,4.5,3.8,Under,4,Under
 2025-04-26,Baltimore Orioles,Detroit Tigers,4.5,3.8,Under,4,Under
 2025-04-26,Houston Astros,Kansas City Royals,4.5,3.662,Under,2,Under
 2025-04-26,Pittsburgh Pirates,Los Angeles Dodgers,4.5,4.5455000000000005,Under,6,Over
@@ -418,7 +413,6 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-27,Houston Astros,Kansas City Royals,4.5,3.662,Under,5,Over
 2025-04-27,Pittsburgh Pirates,Los Angeles Dodgers,4.5,4.5455000000000005,Under,6,Over
 2025-04-27,Los Angeles Angels,Minnesota Twins,4.5,6.234428571428571,Over,1,Under
-2025-04-27,Toronto Blue Jays,New York Yankees,4.5,3.6955714285714287,Under,10,Over
 2025-04-27,Toronto Blue Jays,New York Yankees,4.5,3.6955714285714287,Under,Pending,Pending
 2025-04-27,Tampa Bay Rays,San Diego Padres,4.5,5.117964285714285,Over,2,Under
 2025-04-27,Texas Rangers,San Francisco Giants,4.5,3.97375,Under,3,Under
@@ -431,5 +425,20 @@ Game Date,Away Team,Home Team,Target_Line,Predicted_Runs_1to5,Predicted_Over_4_5
 2025-04-28,Atlanta Braves,Colorado Rockies,4.5,5.1855119047619045,Over,Pending,Pending
 2025-04-28,Detroit Tigers,Houston Astros,4.5,4.697154761904762,Under,Pending,Pending
 2025-04-28,Miami Marlins,Los Angeles Dodgers,4.5,5.0625,Over,Pending,Pending
-2025-04-28,Athletics,Texas Rangers,4.5,4.1110649350649355,Under,Pending,Pending
+2025-04-28,Athletics,Texas Rangers,4.5,4.111064935064936,Under,Pending,Pending
 2025-04-28,New York Mets,Washington Nationals,4.5,3.7455,Under,Pending,Pending
+2025-04-29,New York Yankees,Baltimore Orioles,4.5,5.810214285714285,,Pending,Pending
+2025-04-29,Milwaukee Brewers,Chicago White Sox,4.5,4.846690476190476,,Pending,Pending
+2025-04-29,St. Louis Cardinals,Cincinnati Reds,4.5,4.719738095238094,,Pending,Pending
+2025-04-29,Minnesota Twins,Cleveland Guardians,4.5,5.188714285714285,,Pending,Pending
+2025-04-29,Atlanta Braves,Colorado Rockies,4.5,5.1855119047619045,,Pending,Pending
+2025-04-29,Detroit Tigers,Houston Astros,4.5,4.697154761904762,,Pending,Pending
+2025-04-29,Miami Marlins,Los Angeles Dodgers,4.5,5.0625,,Pending,Pending
+2025-04-29,Arizona Diamondbacks,New York Mets,4.5,4.739071428571428,,Pending,Pending
+2025-04-29,Washington Nationals,Philadelphia Phillies,4.5,4.572642857142857,,Pending,Pending
+2025-04-29,Chicago Cubs,Pittsburgh Pirates,4.5,4.420904761904762,,Pending,Pending
+2025-04-29,San Francisco Giants,San Diego Padres,4.5,4.9869642857142855,,Pending,Pending
+2025-04-29,Los Angeles Angels,Seattle Mariners,4.5,4.977,,Pending,Pending
+2025-04-29,Kansas City Royals,Tampa Bay Rays,4.5,4.169642857142857,,Pending,Pending
+2025-04-29,Athletics,Texas Rangers,4.5,4.1110649350649355,,Pending,Pending
+2025-04-29,Boston Red Sox,Toronto Blue Jays,4.5,4.750642857142857,,Pending,Pending

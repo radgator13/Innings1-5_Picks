@@ -16,4 +16,14 @@ subprocess.run(["python", "1to5_predictions_full.py"], check=True)
 print("🚀 Launching Streamlit Dashboard...")
 subprocess.Popen(["streamlit", "run", "app.py"])
 
+# Step 4: Push any changes to GitHub
+print("🚀 Pushing updates to GitHub...")
+try:
+    subprocess.run(["git", "add", "."], check=True)
+    subprocess.run(["git", "commit", "-m", "Automated pipeline update: boxscores, predictions, dashboard"], check=True)
+    subprocess.run(["git", "push"], check=True)
+    print("✅ GitHub push successful!")
+except subprocess.CalledProcessError:
+    print("⚠️ GitHub push failed (maybe no changes to commit).")
+
 print("\n✅ Pipeline completed successfully! 🌟 The dashboard should open in your browser!")
