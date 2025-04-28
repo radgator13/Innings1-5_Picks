@@ -55,9 +55,23 @@ X_all = X_all.reindex(columns=feature_cols, fill_value=0)
 all_probs = model.predict_proba(X_all)[:, 1]
 all_preds = model.predict(X_all)
 
+# 7.5 Predict Over/Under with Tolerance Tuning
 full_df['Target_Line'] = 4.5
 full_df['Predicted_Runs_1to5'] = all_probs * 3 + 3.5
-full_df['Predicted_Over_4_5'] = pd.Series(all_preds).map({1: 'Over', 0: 'Under'})
+
+# Define your tolerance
+tolerance = 0.25  # 🔥 You can tune this up or down
+
+# Decision logic
+def decide_over_under(row):
+    if row['Predicted_Runs_1to5'] > (row['Target_Line'] + tolerance):
+        return "Over"
+    elif row['Predicted_Runs_1to5'] < (row['Target_Line'] - tolerance):
+        return "Under"
+    else:
+        return "No Bet"  # Close to line, no confident pick
+
+full_df['Predicted_Over_4_5'] = full_df.apply(decide_over_under, axis=1)
 
 # 8. Attach actual game results
 def get_actual_over(row):

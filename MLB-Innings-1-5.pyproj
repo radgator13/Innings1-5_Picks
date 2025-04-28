@@ -12,6 +12,7 @@
     <OutputPath>.</OutputPath>
     <Name>MLB-Innings-1-5</Name>
     <RootNamespace>ScratchModelV4</RootNamespace>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
