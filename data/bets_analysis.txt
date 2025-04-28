@@ -1,0 +1,35 @@
+📊 FULL SPORTS BETTING ANALYSIS
+================================
+
+🏈🏀⚾ SPORT: UNKNOWN
+--------------------------------
+Total Bets: 1
+Wins: 0
+Losses: 1
+Win Rate: 0.00%
+Total Risked: $0.00
+Total Returned: $0.00
+Net Profit/Loss: $0.00
+ROI: 0.00%
+
+🏈🏀⚾ SPORT: UNKNOWN
+--------------------------------
+Total Bets: 0
+Wins: 0
+Losses: 0
+Win Rate: 0.00%
+Total Risked: $0.00
+Total Returned: $0.00
+Net Profit/Loss: $0.00
+ROI: 0.00%
+
+📈 TOTAL ACROSS ALL SPORTS
+--------------------------------
+Total Bets: 259
+Wins: 130
+Losses: 129
+Win Rate: 50.19%
+Total Risked: $1451.65
+Total Returned: $1400.67
+Net Profit/Loss: $-50.98
+ROI: -3.51%
