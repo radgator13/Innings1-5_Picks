@@ -42,11 +42,29 @@ else:
 
 # 6. Filter to only new games
 full_df['key'] = list(zip(full_df['Game Date'], full_df['Away Team'], full_df['Home Team']))
-full_df = full_df[~full_df['key'].isin(existing_keys)]
 
-if full_df.empty:
-    print("🚫 No new games to predict. Exiting.")
+# Separate completely new games
+new_games_df = full_df[~full_df['key'].isin(existing_keys)]
+
+# Load existing predictions
+if os.path.exists(predictions_file):
+    existing_preds = pd.read_csv(predictions_file)
+    existing_preds['key'] = list(zip(existing_preds['Game Date'], existing_preds['Away Team'], existing_preds['Home Team']))
+
+    # Identify games where actual results are still "Pending"
+    pending_games = existing_preds[existing_preds['Actual_Over_4_5'] == "Pending"]
+else:
+    pending_games = pd.DataFrame()
+
+# Merge: New games + Pending games to reprocess
+if not new_games_df.empty or not pending_games.empty:
+    print(f"🔄 Updating {len(pending_games)} pending games and {len(new_games_df)} new games.")
+
+    full_df_to_predict = pd.concat([new_games_df, pending_games], ignore_index=True)
+else:
+    print("🚫 No new or pending games to update. Exiting.")
     exit()
+
 
 # 7. Predict for only new games
 X_all = pd.get_dummies(full_df[['Away Team', 'Home Team']])
