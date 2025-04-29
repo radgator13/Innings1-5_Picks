@@ -21,7 +21,6 @@ def get_game_ids(date_obj):
     
     return games
 
-
 def extract_boxscore(game_id, game_date):
     url = f"https://www.espn.com/mlb/boxscore/_/gameId/{game_id}"
     print(f"🌐 Scraping HTML: {url}")
@@ -113,15 +112,37 @@ def scrape_range(start_date, end_date, output_file="data/mlb_boxscores_full.csv"
     new_rows = []
 
     while current <= end:
+        print(f"📅 Checking games on {current.strftime('%Y-%m-%d')}")
         games = get_game_ids(current)
+        print(f"Found {len(games)} games.")
+
         for game in games:
-            try:
-                row = extract_boxscore(game["gameId"], game["date"])
-                if row:
-                    new_rows.append(row)
-            except Exception as e:
-                print(f"❌ Error parsing {game['gameId']}: {e}")
+            should_scrape = True
+
+            if not existing_df.empty:
+                existing_row = existing_df[
+                    (existing_df['Game Date'] == game['date']) &
+                    (existing_df['Away Team'].notna()) &
+                    (existing_df['Home Team'].notna())
+                ]
+
+                if not existing_row.empty:
+                    inning_cols = [f"Away {i}th" for i in range(1, 6)] + [f"Home {i}th" for i in range(1, 6)]
+                    pending_innings = existing_row[inning_cols].isin(["Pending"]).any().any()
+
+                    if not pending_innings:
+                        should_scrape = False
+
+            if should_scrape:
+                try:
+                    row = extract_boxscore(game["gameId"], game["date"])
+                    if row:
+                        new_rows.append(row)
+                except Exception as e:
+                    print(f"❌ Error parsing {game['gameId']}: {e}")
+
             time.sleep(0.75)
+
         current += timedelta(days=1)
 
     if new_rows:
@@ -152,14 +173,14 @@ def scrape_range(start_date, end_date, output_file="data/mlb_boxscores_full.csv"
                 (combined.loc[mask, 'Away 1th'] + combined.loc[mask, 'Home 1th']) > 0
             ).astype(int)
 
-            print("✅ YRFI column created based on 1st inning runs.")
+            print("✅ YRFI column created.")
         else:
-            print("⚠️ Could not create YRFI column — missing 1st inning data.")
+            print("⚠️ Missing 1st inning columns for YRFI.")
 
         combined.to_csv(output_file, index=False)
         print(f"✅ Saved full boxscores to {output_file} ({len(combined)} rows)")
 
-        # Calculate Total_1to5_Runs
+        # Save trimmed 1-5 innings data
         if all(col in combined.columns for col in [f"Away {i}th" for i in range(1,6)] + [f"Home {i}th" for i in range(1,6)]):
             mask_1to5 = (
                 combined[[f"Away {i}th" for i in range(1,6)] + [f"Home {i}th" for i in range(1,6)]]
@@ -168,36 +189,20 @@ def scrape_range(start_date, end_date, output_file="data/mlb_boxscores_full.csv"
 
             for inning in range(1,6):
                 combined[f"Away {inning}th"] = combined[f"Away {inning}th"].apply(lambda x: int(float(x)) if str(x).replace('.', '', 1).isdigit() else 0)
-
                 combined[f"Home {inning}th"] = combined[f"Home {inning}th"].apply(lambda x: int(float(x)) if str(x).replace('.', '', 1).isdigit() else 0)
-
 
             combined.loc[mask_1to5, 'Total_1to5_Runs'] = (
                 combined.loc[mask_1to5, [f"Away {i}th" for i in range(1,6)] + [f"Home {i}th" for i in range(1,6)]]
                 .sum(axis=1)
             )
 
-            print("✅ Total_1to5_Runs column created.")
-
-            # Save trimmed 1-5 innings data
             combined[['Game Date', 'Away Team', 'Home Team', 'Total_1to5_Runs']].dropna().to_csv(output_file_1to5, index=False)
-            print(f"✅ Saved 1-5 innings totals to {output_file_1to5} ({combined['Total_1to5_Runs'].notna().sum()} rows)")
+            print(f"✅ Saved 1-5 innings totals to {output_file_1to5}")
         else:
             print("⚠️ Missing inning columns to calculate 1-5 total.")
 
     else:
-        print("ℹ️ No new games found to append.")
-
-
-# if __name__ == "__main__":
-#     # ⏩ First run: scrape starting from 3-27-2024
-#     start_date = "2025-03-27"
-#     today = datetime.today()
-#     end_date = (today + timedelta(days=1)).strftime("%Y-%m-%d")
-
-#     print(f"🚀 Scraping boxscores for: {start_date} to {end_date}")
-#     scrape_range(start_date, end_date)
-
+        print("ℹ️ No new games found to update.")
 
 if __name__ == "__main__":
     today = datetime.today()
