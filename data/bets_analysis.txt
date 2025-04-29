@@ -25,11 +25,11 @@ ROI: 0.00%
 
 📈 TOTAL ACROSS ALL SPORTS
 --------------------------------
-Total Bets: 259
-Wins: 130
-Losses: 129
-Win Rate: 50.19%
-Total Risked: $1451.65
-Total Returned: $1400.67
-Net Profit/Loss: $-50.98
-ROI: -3.51%
+Total Bets: 265
+Wins: 134
+Losses: 131
+Win Rate: 50.57%
+Total Risked: $1485.41
+Total Returned: $1444.48
+Net Profit/Loss: $-40.93
+ROI: -2.76%
