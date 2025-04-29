@@ -25,12 +25,12 @@
   <ItemGroup>
     <Compile Include="1to5_predictions_full.py" />
     <Compile Include="app.py" />
-    <Compile Include="bet_analyze.py" />
-    <Compile Include="clean_bet_logs.py" />
-    <Compile Include="create_bet_chart.py" />
+    <Compile Include="archive\bet_analyze.py" />
+    <Compile Include="archive\clean_bet_logs.py" />
+    <Compile Include="archive\create_bet_chart.py" />
     <Compile Include="get_scores_full.py" />
     <Compile Include="archive\load_data.py" />
-    <Compile Include="odds_api.py" />
+    <Compile Include="archive\odds_api.py" />
     <Compile Include="pipeline.py" />
     <Compile Include="archive\train_model.py" />
   </ItemGroup>
