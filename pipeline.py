@@ -8,19 +8,23 @@ print("🛠️ Starting full MLB 1-5 innings model pipeline...")
 print("🚀 Scraping latest boxscores...")
 subprocess.run(["python", "get_scores_full.py"], check=True)
 
-# Step 2: Run 1to5_predictions_full.py (predict using latest model)
+# Step 2: Retrain model using latest data
+print("🚀 Training model on latest boxscore data...")
+subprocess.run(["python", "train_1to5_model.py"], check=True)
+
+# Step 3: Run 1to5_predictions_full.py (predict using latest model)
 print("🚀 Predicting today's and future games...")
 subprocess.run(["python", "1to5_predictions_full.py"], check=True)
 
-# Step 3: Launch Streamlit app
+# Step 4: Launch Streamlit app
 print("🚀 Launching Streamlit Dashboard...")
 subprocess.Popen(["streamlit", "run", "app.py"])
 
-# Step 4: Push any changes to GitHub
+# Step 5: Push any changes to GitHub
 print("🚀 Pushing updates to GitHub...")
 try:
     subprocess.run(["git", "add", "."], check=True)
-    subprocess.run(["git", "commit", "-m", "Automated pipeline update: boxscores, predictions, dashboard"], check=True)
+    subprocess.run(["git", "commit", "-m", "Automated pipeline update: boxscores, model, predictions, dashboard"], check=True)
     subprocess.run(["git", "push"], check=True)
     print("✅ GitHub push successful!")
 except subprocess.CalledProcessError:

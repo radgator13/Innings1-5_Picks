@@ -79,12 +79,30 @@ print(f"⏳ Pending games based on inning columns: {len(filtered_pending)}")
 print(f"🧮 Games to predict (combined): {len(games_to_predict)}")
 print("🚨 END DEBUGGING SECTION\n")
 
-# === Build features with full dummy alignment ===
-team_dummies = pd.get_dummies(games_to_predict[['Away Team', 'Home Team']])
-missing_cols = [col for col in feature_cols if col not in team_dummies.columns]
+# === ADD FEATURES ===
+games_to_predict["DayOfWeek"] = games_to_predict["Game Date"].dt.dayofweek
+
+# Extract win % from records
+def extract_win_pct(record):
+    try:
+        w, l = map(int, str(record).split("-"))
+        return w / (w + l) if w + l > 0 else 0.5
+    except:
+        return 0.5
+
+games_to_predict["HomeWinPct"] = games_to_predict["Home Record"].apply(extract_win_pct)
+games_to_predict["AwayWinPct"] = games_to_predict["Away Record"].apply(extract_win_pct)
+
+# === Build features ===
+categorical = pd.get_dummies(games_to_predict[["Away Team", "Home Team", "DayOfWeek"]])
+numerical = games_to_predict[["HomeWinPct", "AwayWinPct"]]
+X_all = pd.concat([categorical, numerical], axis=1)
+
+# Ensure column alignment with model
+missing_cols = [col for col in feature_cols if col not in X_all.columns]
 for col in missing_cols:
-    team_dummies[col] = 0
-X = team_dummies[feature_cols]
+    X_all[col] = 0
+X = X_all[feature_cols]
 
 # === Predict ===
 all_probs = model.predict_proba(X)[:, 1]
@@ -103,7 +121,7 @@ def decide_over_under(row):
 
 games_to_predict['Predicted_Over_4_5'] = games_to_predict.apply(decide_over_under, axis=1)
 
-# === Actuals from predictions ===
+# === Actuals ===
 def get_actual_over(row):
     inning_scores = [row.get(f'Away {i}th', 0) + row.get(f'Home {i}th', 0) for i in range(1, 6)]
     if all(score == 0 for score in inning_scores):

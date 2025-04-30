@@ -33,6 +33,7 @@
     <Compile Include="archive\odds_api.py" />
     <Compile Include="pipeline.py" />
     <Compile Include="archive\train_model.py" />
+    <Compile Include="train_1to5_model.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
