@@ -77,25 +77,6 @@ print(f"📊 Total rows in full_df: {len(full_df)}")
 print(f"🆕 New games (not in predictions): {len(new_games_df)}")
 print(f"⏳ Pending games based on inning columns: {len(filtered_pending)}")
 print(f"🧮 Games to predict (combined): {len(games_to_predict)}")
-
-print("\n🔍 Sample of full_df rows with Game Date >= today:")
-print(full_df[full_df['Game Date'] >= today][[
-    "Game Date", "Away Team", "Home Team", "is_pending"
-]].head(10))
-
-print("\n🔍 Sample of full_df rows with Game Date > today (future only):")
-print(full_df[full_df['Game Date'] > today][[
-    "Game Date", "Away Team", "Home Team", "is_pending"
-]].head(10))
-
-print("\n🔍 Pending game check sample (is_pending == True):")
-print(filtered_pending[[
-    "Game Date", "Away Team", "Home Team"
-]].head(10))
-
-if games_to_predict.empty:
-    print("🚫 No future games to predict. Exiting.")
-    exit()
 print("🚨 END DEBUGGING SECTION\n")
 
 # === Build features ===
@@ -119,7 +100,7 @@ def decide_over_under(row):
 
 games_to_predict['Predicted_Over_4_5'] = games_to_predict.apply(decide_over_under, axis=1)
 
-# === Actuals ===
+# === Actuals from new predictions ===
 def get_actual_over(row):
     inning_scores = [row.get(f'Away {i}th', 0) + row.get(f'Home {i}th', 0) for i in range(1, 6)]
     if all(score == 0 for score in inning_scores):
@@ -138,13 +119,31 @@ output_cols = [
     'Target_Line', 'Predicted_Runs_1to5', 'Predicted_Over_4_5',
     'Actual_Runs_1to5', 'Actual_Over_4_5'
 ]
-new_predictions = games_to_predict[output_cols]
-
-# === Normalize before merging ===
-new_predictions = new_predictions.copy()
+new_predictions = games_to_predict[output_cols].copy()
 new_predictions['Away Team'] = new_predictions['Away Team'].str.strip().str.lower()
 new_predictions['Home Team'] = new_predictions['Home Team'].str.strip().str.lower()
 
+# === Update existing predictions with actuals ===
+def get_updated_actuals(row, actual_lookup):
+    key = (row['Game Date'].strftime('%Y-%m-%d'), row['Away Team'], row['Home Team'])
+    if key in actual_lookup:
+        actual_row = actual_lookup[key]
+        inning_scores = [actual_row.get(f'Away {i}th', 0) + actual_row.get(f'Home {i}th', 0) for i in range(1, 6)]
+        total_runs = sum(inning_scores)
+        if all(score == 0 for score in inning_scores):
+            return pd.Series(["Pending", "Pending"])
+        over_under = "Over" if total_runs > 4.5 else "Under"
+        return pd.Series([over_under, total_runs])
+    return pd.Series([row['Actual_Over_4_5'], row['Actual_Runs_1to5']])
+
+actual_lookup = {
+    (row['Game Date'].strftime('%Y-%m-%d'), row['Away Team'], row['Home Team']): row
+    for _, row in full_df.iterrows()
+}
+
+if not existing_preds.empty:
+    updates = existing_preds.apply(lambda row: get_updated_actuals(row, actual_lookup), axis=1)
+    existing_preds[['Actual_Over_4_5', 'Actual_Runs_1to5']] = updates
 
 # === Save snapshot ===
 snapshot_path = f"data/predictions_{datetime.today().strftime('%Y-%m-%d')}.csv"
