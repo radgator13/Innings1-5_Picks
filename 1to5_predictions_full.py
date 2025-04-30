@@ -79,9 +79,12 @@ print(f"⏳ Pending games based on inning columns: {len(filtered_pending)}")
 print(f"🧮 Games to predict (combined): {len(games_to_predict)}")
 print("🚨 END DEBUGGING SECTION\n")
 
-# === Build features ===
-X = pd.get_dummies(games_to_predict[['Away Team', 'Home Team']])
-X = X.reindex(columns=feature_cols, fill_value=0)
+# === Build features with full dummy alignment ===
+team_dummies = pd.get_dummies(games_to_predict[['Away Team', 'Home Team']])
+missing_cols = [col for col in feature_cols if col not in team_dummies.columns]
+for col in missing_cols:
+    team_dummies[col] = 0
+X = team_dummies[feature_cols]
 
 # === Predict ===
 all_probs = model.predict_proba(X)[:, 1]
@@ -100,7 +103,7 @@ def decide_over_under(row):
 
 games_to_predict['Predicted_Over_4_5'] = games_to_predict.apply(decide_over_under, axis=1)
 
-# === Actuals from new predictions ===
+# === Actuals from predictions ===
 def get_actual_over(row):
     inning_scores = [row.get(f'Away {i}th', 0) + row.get(f'Home {i}th', 0) for i in range(1, 6)]
     if all(score == 0 for score in inning_scores):
@@ -123,7 +126,7 @@ new_predictions = games_to_predict[output_cols].copy()
 new_predictions['Away Team'] = new_predictions['Away Team'].str.strip().str.lower()
 new_predictions['Home Team'] = new_predictions['Home Team'].str.strip().str.lower()
 
-# === Update existing predictions with actuals ===
+# === Update actuals in existing_preds ===
 def get_updated_actuals(row, actual_lookup):
     key = (row['Game Date'].strftime('%Y-%m-%d'), row['Away Team'], row['Home Team'])
     if key in actual_lookup:
