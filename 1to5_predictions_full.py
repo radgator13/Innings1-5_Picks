@@ -14,6 +14,10 @@ print(f"\n📥 Loading boxscores from {boxscore_path}")
 full_df = pd.read_csv(boxscore_path)
 print(f"📊 Loaded {len(full_df)} total rows")
 
+# === Normalize team names early ===
+full_df['Away Team'] = full_df['Away Team'].str.strip().str.lower()
+full_df['Home Team'] = full_df['Home Team'].str.strip().str.lower()
+
 # === Detect pending BEFORE cleaning ===
 def is_pending(row):
     inning_cols = [f"Away {i}th" for i in range(1, 6)] + [f"Home {i}th" for i in range(1, 6)]
@@ -40,6 +44,8 @@ full_df['key'] = list(zip(full_df['Game Date'].dt.strftime('%Y-%m-%d'), full_df[
 predictions_file = "data/mlb_boxscores_1to5_model_full_predictions.csv"
 if os.path.exists(predictions_file):
     existing_preds = pd.read_csv(predictions_file)
+    existing_preds['Away Team'] = existing_preds['Away Team'].str.strip().str.lower()
+    existing_preds['Home Team'] = existing_preds['Home Team'].str.strip().str.lower()
     existing_preds['key'] = list(zip(existing_preds['Game Date'], existing_preds['Away Team'], existing_preds['Home Team']))
     existing_preds['Game Date'] = pd.to_datetime(existing_preds['Game Date'])
     print(f"📄 Existing predictions loaded: {len(existing_preds)}")
@@ -133,6 +139,12 @@ output_cols = [
     'Actual_Runs_1to5', 'Actual_Over_4_5'
 ]
 new_predictions = games_to_predict[output_cols]
+
+# === Normalize before merging ===
+new_predictions = new_predictions.copy()
+new_predictions['Away Team'] = new_predictions['Away Team'].str.strip().str.lower()
+new_predictions['Home Team'] = new_predictions['Home Team'].str.strip().str.lower()
+
 
 # === Save snapshot ===
 snapshot_path = f"data/predictions_{datetime.today().strftime('%Y-%m-%d')}.csv"
